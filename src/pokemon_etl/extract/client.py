@@ -31,13 +31,13 @@ async def get_pokemon(client:httpx.AsyncClient, url: str):
     return response.json()
 
 
-def build_cached_resource (resource, identifier):
-    return RAW_DIR/resource/f"{identifier}.json"
+def _build_cached_resource (resource, identifier):
+    return RAW_DIR / resource / f"{identifier}.json"
 
 
-
+# controlla se dati gia presenti, se non ci sono li registra
 async def get_cached_resource (client: httpx.AsyncClient, semaphore, resource: str, identifier: str,):
-    cache_path = build_cached_resource(resource, identifier)
+    cache_path = _build_cached_resource(resource, identifier)
 
     cache_path.parent.mkdir(parents=True, exist_ok=True)
 
