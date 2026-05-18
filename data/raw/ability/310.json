@@ -1,0 +1,77 @@
+{
+  "effect_changes": [],
+  "effect_entries": [
+    {
+      "effect": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "short_effect": "The Pokémon can use its moves as if the weather were harsh sunlight."
+    }
+  ],
+  "flavor_text_entries": [
+    {
+      "flavor_text": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "version_group": {
+        "name": "champions",
+        "url": "https://pokeapi.co/api/v2/version-group/32/"
+      }
+    },
+    {
+      "flavor_text": "天気が　にほんばれ状態でなくても\nにほんばれ状態として\n技を使うことができる。",
+      "language": {
+        "name": "ja",
+        "url": "https://pokeapi.co/api/v2/language/11/"
+      },
+      "version_group": {
+        "name": "champions",
+        "url": "https://pokeapi.co/api/v2/version-group/32/"
+      }
+    }
+  ],
+  "generation": {
+    "name": "generation-ix",
+    "url": "https://pokeapi.co/api/v2/generation/9/"
+  },
+  "id": 310,
+  "is_main_series": true,
+  "name": "mega-sol",
+  "names": [
+    {
+      "language": {
+        "name": "ja-hrkt",
+        "url": "https://pokeapi.co/api/v2/language/1/"
+      },
+      "name": "メガソーラー"
+    },
+    {
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "name": "Mega Sol"
+    },
+    {
+      "language": {
+        "name": "ja",
+        "url": "https://pokeapi.co/api/v2/language/11/"
+      },
+      "name": "メガソーラー"
+    }
+  ],
+  "pokemon": [
+    {
+      "is_hidden": false,
+      "pokemon": {
+        "name": "meganium-mega",
+        "url": "https://pokeapi.co/api/v2/pokemon/10282/"
+      },
+      "slot": 1
+    }
+  ]
+}

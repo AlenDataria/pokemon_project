@@ -1,0 +1,77 @@
+{
+  "effect_changes": [],
+  "effect_entries": [
+    {
+      "effect": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "short_effect": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
+    }
+  ],
+  "flavor_text_entries": [
+    {
+      "flavor_text": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "version_group": {
+        "name": "champions",
+        "url": "https://pokeapi.co/api/v2/version-group/32/"
+      }
+    },
+    {
+      "flavor_text": "ノーマルタイプの技がドラゴンタイプになり\n威力が1.2倍になる。",
+      "language": {
+        "name": "ja",
+        "url": "https://pokeapi.co/api/v2/language/11/"
+      },
+      "version_group": {
+        "name": "champions",
+        "url": "https://pokeapi.co/api/v2/version-group/32/"
+      }
+    }
+  ],
+  "generation": {
+    "name": "generation-ix",
+    "url": "https://pokeapi.co/api/v2/generation/9/"
+  },
+  "id": 309,
+  "is_main_series": true,
+  "name": "dragonize",
+  "names": [
+    {
+      "language": {
+        "name": "ja-hrkt",
+        "url": "https://pokeapi.co/api/v2/language/1/"
+      },
+      "name": "ドラゴンスキン"
+    },
+    {
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "name": "Dragonize"
+    },
+    {
+      "language": {
+        "name": "ja",
+        "url": "https://pokeapi.co/api/v2/language/11/"
+      },
+      "name": "ドラゴンスキン"
+    }
+  ],
+  "pokemon": [
+    {
+      "is_hidden": false,
+      "pokemon": {
+        "name": "feraligatr-mega",
+        "url": "https://pokeapi.co/api/v2/pokemon/10283/"
+      },
+      "slot": 1
+    }
+  ]
+}
