@@ -2,8 +2,9 @@ from pathlib import Path
 
 BASE_URL = "https://pokeapi.co/api/v2"
 
-DATA_DIR = Path("data")
 
+BASE_DIR = Path("/Users/rosannadenigro/PycharmProjects/pokemon_project")
+DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 CLEAN_DIR = DATA_DIR / "clean"
 
