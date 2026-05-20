@@ -95,3 +95,7 @@ def transform_type_damage_relations():
     file_path = CLEAN_DIR / "type_damage_relations.parquet"
     df_type_damage_relations = lf_type_damage_relations.collect()
     df_type_damage_relations.write_parquet(file_path)
+
+
+transform_types()
+transform_type_damage_relations()

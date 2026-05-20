@@ -20,3 +20,6 @@ def transform_species():
     df_species = species_lf_clean.collect()
     file_path = CLEAN_DIR / "species.parquet"
     df_species.write_parquet(file_path)
+
+
+transform_species()
