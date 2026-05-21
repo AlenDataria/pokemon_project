@@ -25,47 +25,22 @@ conn.execute("""
 
 #Creazione vw_stats_pivot
 conn.execute(f"""
-    CREATE OR REPLACE VIEW vw_pokemon_stats_pivot AS
+    CREATE OR REPLACE VIEW vw_stats_pivot AS
     SELECT
-        pokemon_id,
-        MAX(
-            CASE
-                WHEN stat_name = 'hp'
-                THEN base_stat
-            END
-        ) AS hp,
-         MAX(
-            CASE
-                WHEN stat_name = 'attack'
-                THEN base_stat
-            END
-        ) AS attack,
-         MAX(
-            CASE
-                WHEN stat_name = 'defense'
-                THEN base_stat
-            END
-        ) AS defense,
-         MAX(
-            CASE
-                WHEN stat_name = 'special-attack'
-                THEN base_stat
-            END
-        ) AS special_attack,
-         MAX(
-            CASE
-                WHEN stat_name = 'special-defense'
-                THEN base_stat
-            END
-        ) AS special_defense,
-         MAX(
-            CASE
-                WHEN stat_name = 'speed'
-                THEN base_stat
-            END
-        ) AS speed
-    FROM pokemon_stats
-    GROUP BY pokemon_id
+        *,
+        hp + attack + defense + special_attack + special_defense + speed AS stat_total
+    FROM (
+        SELECT
+            pokemon_id,
+            MAX(CASE WHEN stat_name = 'hp' THEN base_stat END) AS hp,
+            MAX(CASE WHEN stat_name = 'attack' THEN base_stat END) AS attack,
+            MAX(CASE WHEN stat_name = 'defense' THEN base_stat END) AS defense,
+            MAX(CASE WHEN stat_name = 'special-attack' THEN base_stat END) AS special_attack,
+            MAX(CASE WHEN stat_name = 'special-defense' THEN base_stat END) AS special_defense,
+            MAX(CASE WHEN stat_name = 'speed' THEN base_stat END) AS speed
+        FROM pokemon_stats
+        GROUP BY pokemon_id
+    )
 """)
 
 #Creazione vw_type_matchups

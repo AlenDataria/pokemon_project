@@ -129,10 +129,7 @@ def transform_pokemon_abilities():
 
 
 
-transform_pokemon()
-transform_pokemon_stats()
-transform_pokemon_types()
-transform_pokemon_abilities()
+
 
 
 

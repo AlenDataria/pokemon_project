@@ -22,4 +22,3 @@ def transform_species():
     df_species.write_parquet(file_path)
 
 
-transform_species()

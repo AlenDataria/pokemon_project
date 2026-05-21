@@ -107,10 +107,7 @@ async def ingest_pokemon ():
 
 
 
-#FUNZIONE CALL CLI
-def run_extract ():
-    start = time.perf_counter()
-    logger.info(f"Starting pokemon ingestion")
-    asyncio.run(ingest_pokemon())
-    elapsed = time.perf_counter() - start
-    logger.info(f"Finished pokemon ingestion in {elapsed:.2f} seconds")
+
+
+
+
