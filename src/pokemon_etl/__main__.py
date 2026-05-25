@@ -1,4 +1,3 @@
-from pokemon_etl.cli import main
-
+import main
 if __name__ == "__main__":
     main()
