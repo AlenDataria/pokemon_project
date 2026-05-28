@@ -1,8 +1,9 @@
 import requests
 from src.const import pokemon_url
+from src.pokemon import Pokemon
 
 def extract_names() -> list:
-
+    """extracts every pokemon name in existence"""
     search_path = pokemon_url
     data = []
     i = 0
@@ -22,24 +23,40 @@ def extract_names() -> list:
 
     return data
 
-def get_pokemon_data(pokemon_name: str):
- url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}"
- response = requests.get(url)
+def get_pokemon_data(pokemon_name: str)->Pokemon | None:
+    """given a pokemon name returns a pokemon object"""
+    #takes data for one pokemon
+    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}"
+    response = requests.get(url)
+    data = response.json()
 
- if response.status_code == 200:
-     return response.json()
- else:
-     return None
+    if response.status_code == 200:
+        pokemon = Pokemon(
+            name = data["name"],
+            types = [element["type"]["name"] for element in data["types"]],
+            abilities = [element["ability"]["name"] for element in data["abilities"]],
+            cry = data["cries"]["latest"],
+            forms = [form["name"] for form in data["forms"]],
+            height= data["height"],
+            id = data["id"],
+            moves=[element["move"]["name"] for element in data["moves"]],
+            species=data["species"]["name"],
+            sprites=data["sprites"],
+            stats= {element["stat"]["name"]: element["base_stat"] for element in data["stats"]},
+            weight=data["weight"],
+        )
+        return pokemon
+    else:
+        return None
 
 
 if __name__ == "__main__":
-    from src.save import save_json
-    from src.const import RAW_DATA_DIR
 
-    data = get_pokemon_data("bulbasaur")
+    bulbasaur = get_pokemon_data("bulbasaur")
 
-    save_json(data, path = RAW_DATA_DIR/"test_bulba.json")
-    print("mia madre")
+    print(bulbasaur)
+
+
 
 
 
